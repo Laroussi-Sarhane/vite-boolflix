@@ -6,13 +6,13 @@ export default {
 <template>
 
   <header>
-    <div class="container">
+    <div class="container d-flex justify-content-between py-3 ">
 
-      <div>
+      <div class=" text-white ">
         logo
       </div>
 
-      <div>
+      <div class=" text-white ">
         barra di ricerca
       </div>
 
@@ -24,7 +24,8 @@ export default {
 
 <style lang="scss" scoped>
 header{ 
-  display: flex;
+  height: 90px;
+  background-color: black;
 
 }
 
