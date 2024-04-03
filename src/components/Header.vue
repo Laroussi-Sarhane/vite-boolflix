@@ -22,6 +22,10 @@ export default {
 </template>
 
 
-<style>
+<style lang="scss" scoped>
+header{ 
+  display: flex;
+
+}
 
 </style>
