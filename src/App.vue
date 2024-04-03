@@ -23,7 +23,7 @@
         console.log( 'GET API');
         axios.get(this.store.apiUrl,{
           params:{
-            query: 'ritorno+al+futuro',
+            query: 'matrix',
             api_key: '1c5822408e689c2701a28f5b3356172c',
             language :'it-IT'
           }
