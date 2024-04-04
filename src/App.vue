@@ -13,33 +13,23 @@
       Footer
 
     },
-    data(){
-      return{
-        store
-      }
-    },
+   
     methods:{
-      getApi(){
-        console.log( 'GET API');
-        axios.get(this.store.apiUrl,{
-          params:{
-            query: 'matrix',
-            api_key: '1c5822408e689c2701a28f5b3356172c',
-            language :'it-IT'
-          }
-        })
-        .then(result=>{
-          this.store.cardList = result.data.results;
-          console.log(result.data.results);
-        })
-        .catch(error=>{
-          console.log(error);
-        })
+      getApi(type){
+        axios.get(store.apiUrl +type, {
+          params: store.apiParams
 
+        })
+        .then( res=> {
+          store[type] = res.data.results;
+        })
       }
+
     },
+    // queste sono le mie 2 chiamate api
     mounted(){
-      this.getApi()
+      this.getApi('movie')
+      this.getApi('tv')
     }
   
   }

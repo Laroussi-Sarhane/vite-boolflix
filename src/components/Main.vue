@@ -9,6 +9,11 @@ export default {
     return{
       store
     }
+  },
+  computed:{
+    title(){
+      return this.type === 'movie'?'film':'serie TV'
+    }
   }
 
 }
@@ -18,15 +23,10 @@ export default {
   <div class=" container ">
     <div class=" row row-cols-3 mb-3  ">
 
-      <card v-for="card in this.store.cardList" 
-      :key="card.id"
-      :title="card.title"
-      :originalTitle="card.original_title" 
-      :language="card.original_language" 
-      :rate="card.vote_average"
-      :image="card.backdrop_path"
+      <card type="movie"
       
       />
+      <card/>
       
     </div>
 

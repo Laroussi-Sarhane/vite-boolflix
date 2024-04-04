@@ -1,11 +1,7 @@
   <script>
   export default {
     props:{
-      title: String,
-      originalTitle: String,
-      language: String,
-      rate: Number,
-      image: String
+     type:String
     }
   
   }
