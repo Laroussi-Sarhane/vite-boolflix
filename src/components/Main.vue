@@ -1,9 +1,12 @@
 <script>
-import card from './partialss/card.vue';
+import Card from './partialss/Card.vue';
 import {store} from '../data/store'
 export default {
+  props:{
+    type: String
+  },
   components:{
-    card
+    Card
   },
   data(){
     return{
@@ -12,7 +15,7 @@ export default {
   },
   computed:{
     title(){
-      return this.type === 'movie'?'film':'serie TV'
+      return this.type === 'movie'? 'film': 'serie TV'
     }
   }
 
@@ -22,11 +25,10 @@ export default {
 <template>
   <div class=" container ">
     <div class=" row row-cols-3 mb-3  ">
+      <h3>{{ title }}</h3>
 
-      <card type="movie"
-      
-      />
-      <card/>
+      <Card v-for="item in store[type]" :key="item.id"/>
+      <Card/>
       
     </div>
 

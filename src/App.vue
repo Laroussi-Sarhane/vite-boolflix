@@ -16,7 +16,7 @@
    
     methods:{
       getApi(type){
-        axios.get(store.apiUrl +type, {
+        axios.get(store.apiUrl + type, {
           params: store.apiParams
 
         })
@@ -40,6 +40,8 @@
   <Header />
   <Main />
   <Footer/>
+  <Card type="movie" />
+  <Card type="tv" />
 
 </template>
 
