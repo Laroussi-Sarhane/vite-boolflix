@@ -4,13 +4,15 @@
   import Footer from './components/Footer.vue'
   import axios from 'axios';
   import {store} from './data/store'
+  import Card from './components/partialss/Card.vue';
 
   export default {
 
     components:{
       Header,
       Main,
-      Footer
+      Footer,
+        Card
 
     },
    
@@ -22,6 +24,7 @@
         })
         .then( res=> {
           store[type] = res.data.results;
+          console.log(store[type]);
         })
       }
 
@@ -40,8 +43,7 @@
   <Header />
   <Main />
   <Footer/>
-  <Card type="movie" />
-  <Card type="tv" />
+  <Card />
 
 </template>
 
