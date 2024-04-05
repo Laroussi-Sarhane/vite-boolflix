@@ -5,9 +5,15 @@
     },
     mounted(){
       console.log(this.cardObj)
-    }
-  
+    },
+    
+    
   }
+  const baseURL = "https://image.tmdb.org/t/p";
+  const posterPath = "AkmUoSHkxW9txpzZ52gCcWweEkE.jpg";
+  const posterURL = baseURL + "w500" + posterPath; 
+  console.log(posterURL)
+
   </script>
 
 <template>
