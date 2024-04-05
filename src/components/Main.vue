@@ -26,7 +26,7 @@ export default {
 <template>
   <div class=" container ">
     <div class=" row row-cols-3 mb-3  ">
-      <h3>{{ item }}</h3>
+      <h3>{{ title }}</h3>
 
       <Card v-for="card in store[type]"
        :key="card.id" 

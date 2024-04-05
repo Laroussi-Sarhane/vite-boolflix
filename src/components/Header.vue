@@ -19,8 +19,15 @@ data(){
 
       <div class=" my-2">
         <div class="input-group mb-4">
-          <input type="text" class="form-control" placeholder="cerca il tuo film" aria-label="Recipient's username" aria-describedby="button-addon2">
-          <button class="btn btn-danger" type="cerca" id="button-addon2">cerca</button>
+          <input v-model.trim="store.apiParams.query" 
+          type="text" class="form-control" 
+          placeholder="cerca il tuo film" 
+          aria-label="Recipient's username" 
+          aria-describedby="button-addon2">
+          <button 
+          @click="$emit('startSearch')"
+          @keyup.enter="$emit('startSearch')"
+          class="btn btn-danger" type="cerca" id="button-addon2">cerca</button>
         </div>
       </div>
 

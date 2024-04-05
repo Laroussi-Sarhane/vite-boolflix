@@ -30,13 +30,18 @@
           // cosi è come se facessi due chiamate separata unite in una 
           console.log(store[type]);
         })
+      },
+      startSearch(){
+        this.getApi('movie')
+        this.getApi('tv')
+
       }
+
 
     },
     // queste sono le mie 2 chiamate api
     mounted(){
-      this.getApi('movie')
-      this.getApi('tv')
+      this.startSearch()
     }
   
   }
@@ -44,13 +49,13 @@
 
 <template>
 
-  <Header />
-  <Main />
+  <Header @startSearch="startSearch" />
+  <Main type="movie"/>
+  <Main type="tv"/>
+
   <Footer/>
   
-  <Card type="movie"  /> 
-  <Card type="tv" /> 
-
+  
 
 </template>
 
