@@ -6,7 +6,11 @@
     mounted(){
       console.log(this.cardObj)
     },
-     
+     data(){
+      return{
+        films:[],
+      }
+     }
   
   }
   </script>
