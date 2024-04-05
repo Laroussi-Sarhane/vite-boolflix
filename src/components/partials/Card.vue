@@ -13,7 +13,7 @@
   <img src="" class="card-img-top" alt="title">
   <div class="card-body">
     <h5 class="card-title"></h5>
-    <p class="card-text">{{ cardObj.title  }}</p>
+    <p class="card-text">{{ title }}</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">{{ }}</li>
