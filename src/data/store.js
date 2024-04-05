@@ -7,6 +7,6 @@ export const store = reactive ({
     language: 'it-IT',
     query: 'matrix'
   },
-  Movie :[],
-  tv :[]
+  Movie:[],
+  tv:[]
 })
