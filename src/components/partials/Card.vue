@@ -3,8 +3,11 @@
     props:{
      cardObj: Object,
     },
+   
+
     mounted(){
       console.log(this.cardObj)
+      
     },
      data(){
       return{
