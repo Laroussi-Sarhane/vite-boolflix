@@ -1,12 +1,7 @@
   <script>
   export default {
     props:{
-     type:String,
-     title:String,
-     original_title:String,
-     language:String,
-     vote:String,
-     cardObj:Object
+     cardObj: Object,
     }
   
   }
@@ -18,7 +13,7 @@
   <img src="" class="card-img-top" alt="title">
   <div class="card-body">
     <h5 class="card-title"></h5>
-    <p class="card-text">{{ }}.</p>
+    <p class="card-text">{{ cardObj.title  }}</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">{{ }}</li>
