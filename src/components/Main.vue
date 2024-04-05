@@ -24,22 +24,30 @@ export default {
 </script>
 
 <template>
-  <div class=" container ">
-    <div class=" row row-cols-3 mb-3  ">
-      <h3>{{ title }}</h3>
-
-      <Card v-for="card in store[type]"
-       :key="card.id" 
-       :cardObj="card"/>
-      
-      
+  <main>
+    <div class="my_cont container ">
+      <div class=" row d-flex mb-3 m-3  flex-wrap   ">
+        <h3>{{ title }}</h3>
+  
+        <Card v-for="card in store[type]"
+         :key="card.id" 
+         :cardObj="card"/>
+        
+        
+      </div>
+  
     </div>
 
-  </div>
+  </main>
 
 </template>
 
 
 <style lang="scss" scoped>
+main{
+  background-color: rgb(50, 48, 48);
+  height: 100vh;
+
+}
 
 </style>
